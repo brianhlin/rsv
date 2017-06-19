@@ -127,11 +127,6 @@ else
 fi
 echo "" >> $rsvlog
 
-# See if there is anything in this directory
-echo "Failed gratia directory:" >> $rsvlog
-ls /var/spool/rsv/failed-gratia-records/ >> $rsvlog 2>&1
-echo "" >> $rsvlog
-
 # Attempt to see if proxy exists
 echo "Looking for RSV proxy..." >> $rsvlog
 proxy=`grep service-proxy /etc/rsv/rsv.conf | perl -e '$t = <STDIN>; if($t =~ /^\s*service-proxy\s*=\s*(\S+)/) { print "$1\n" }'`

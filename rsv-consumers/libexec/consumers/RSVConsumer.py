@@ -15,10 +15,6 @@ class TimeoutError(Exception):
     """ This defines an Exception that we can use if our system call times out """
     pass
 
-class GratiaException(Exception):
-    """ This defines an Exception that we can use if sending a Gratia record fails """
-    pass
-
 class RSVConsumer:
     """ This is an abstract RSV Consumer base class.  It should be subclassed
     to detail how to handle each type of record """
@@ -148,8 +144,6 @@ class RSVConsumer:
                 success = True
             except InvalidRecordError, err:
                 self.log("ERROR: Invalid record in file '%s'.  Error: %s" % (file_path, err))
-            except GratiaException, err:
-                self.log("ERROR: Failed to send record '%s' via Gratia: %s" % (file_path, err))
             except Exception, err:
                 self.log("ERROR: An unknown exception occurred when processing file '%s'. Error: " % file_path)
                 self.log(err)

@@ -1,6 +1,0 @@
-[gratia-consumer]
-
-# The HOME=/tmp declaration is a workaround in Gratia the Chris Green indicated
-# that we need in order to successfully send Gratia records.  Removing it results
-# in a hard-to-debug error.
-environment = HOME=/tmp;

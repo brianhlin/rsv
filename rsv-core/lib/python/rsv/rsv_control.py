@@ -57,7 +57,7 @@ def process_options(arguments=None):
                      help="Run the supplied list of metrics against the specified host.")
     group.add_option("--test", action="store_true", dest="test", default=False,
                      help="Same as --run but do not generate records " +
-                          "(therefore nothing goes to Gratia, HTML page, etc).")
+                          "(therefore nothing goes to e.g., HTML page).")
     group.add_option("--all-enabled", action="store_true", dest="all_enabled", default=False,
                      help="Run all enabled metrics serially.")
     group.add_option("--extra-config-file", dest="extra_config_file", default=None,
